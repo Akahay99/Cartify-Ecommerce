@@ -1,0 +1,52 @@
+/* Detail Page Container */
+.product-detail-container {
+  display: flex;
+  flex-direction: row;      /* side by side on desktop */
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+  flex-wrap: wrap;          /* wraps on smaller screens */
+}
+
+/* Detail Page Image */
+.detail-image {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;        /* keeps image ratio */
+  border-radius: 10px;
+}
+
+/* Detail Info Section */
+.detail-info {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Buy Button in Detail */
+.detail-info .btn-buy {
+  width: fit-content;
+  margin-top: 20px;
+}
+
+/* Responsive: stack image above info on small screens */
+@media screen and (max-width: 768px) {
+  .product-detail-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .detail-image {
+    width: 100%;
+    height: auto;
+    max-width: 350px;
+  }
+
+  .detail-info {
+    width: 100%;
+    text-align: center;
+    max-width: none;
+  }
+}
